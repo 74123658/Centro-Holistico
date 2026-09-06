@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mtBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+    <linearGradient id="brainGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#mtBg)"/>
+
+  <!-- Human Head Profile & Glowing Brain (Matching musico-terapia.jpg) -->
+  <g opacity="0.85">
+    <!-- Head Outline -->
+    <path d="M 260,480 C 260,350 220,320 220,260 C 220,170 300,100 420,100 C 530,100 600,170 600,270 C 600,310 590,340 560,380 C 550,420 540,460 550,490" fill="none" stroke="#38BDF8" stroke-width="4" filter="url(#glow)"/>
+    <!-- Ear -->
+    <path d="M 400,320 C 420,320 430,340 420,360 C 410,380 390,380 390,360" fill="none" stroke="#38BDF8" stroke-width="3"/>
+  </g>
+
+  <!-- Brain Synaptic Nodes & Neural Frequencies -->
+  <g filter="url(#glow)">
+    <!-- Neural Network lines -->
+    <path d="M 320,200 L 360,170 L 430,160 L 490,190 L 520,250 L 460,280 L 380,270 L 340,240 Z" fill="none" stroke="#38BDF8" stroke-width="2" stroke-dasharray="4 4"/>
+    <path d="M 360,170 L 460,280" stroke="#818CF8" stroke-width="1.5"/>
+    <path d="M 430,160 L 380,270" stroke="#818CF8" stroke-width="1.5"/>
+
+    <!-- Glowing Synapse Points (Red & Gold nodes like reference) -->
+    <circle cx="320" cy="200" r="7" fill="#EF4444"/>
+    <circle cx="360" cy="170" r="8" fill="#F59E0B"/>
+    <circle cx="430" cy="160" r="10" fill="#EF4444"/>
+    <circle cx="490" cy="190" r="7" fill="#F59E0B"/>
+    <circle cx="520" cy="250" r="9" fill="#EF4444"/>
+    <circle cx="460" cy="280" r="8" fill="#38BDF8"/>
+    <circle cx="380" cy="270" r="9" fill="#EF4444"/>
+  </g>
+
+  <!-- Flowing Musical Staff with Musical Notes (Pentagrama) -->
+  <g stroke="#FFFFFF" stroke-width="2" fill="none" opacity="0.9">
+    <path d="M 120,440 C 220,400 320,460 420,380 C 520,300 620,340 720,260"/>
+    <path d="M 120,455 C 220,415 320,475 420,395 C 520,315 620,355 720,275"/>
+    <path d="M 120,470 C 220,430 320,490 420,410 C 520,330 620,370 720,290"/>
+    <path d="M 120,485 C 220,445 320,505 420,425 C 520,345 620,385 720,305"/>
+    <path d="M 120,500 C 220,460 320,520 420,440 C 520,360 620,400 720,320"/>
+  </g>
+
+  <!-- Musical Clef (Clave de Sol) -->
+  <text x="160" y="490" font-family="serif" font-size="80" fill="#FFFFFF" opacity="0.95" text-anchor="middle">𝄞</text>
+
+  <!-- Floating Musical Notes -->
+  <text x="260" y="440" font-family="serif" font-size="34" fill="#FFFFFF">𝅘𝅥𝅮</text>
+  <text x="360" y="460" font-family="serif" font-size="38" fill="#F8FAFC">𝅘𝅥𝅯</text>
+  <text x="470" y="380" font-family="serif" font-size="40" fill="#F59E0B">𝅘𝅥𝅮</text>
+  <text x="580" y="330" font-family="serif" font-size="36" fill="#38BDF8">𝅘𝅥𝅯</text>
+  <text x="660" y="290" font-family="serif" font-size="32" fill="#FFFFFF">𝅘𝅥𝅮</text>
+
+  <!-- Label Badge -->
+  <rect x="250" y="530" width="300" height="36" rx="18" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5" opacity="0.95"/>
+  <text x="400" y="553" font-family="sans-serif" font-size="13" font-weight="bold" fill="#38BDF8" text-anchor="middle" letter-spacing="1">MUSICOTERAPIA &amp; ARMONIZACIÓN</text>
+</svg>

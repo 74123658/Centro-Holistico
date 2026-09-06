@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dtBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="60%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <linearGradient id="floorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#CBD5E1"/>
+    </linearGradient>
+    <filter id="dShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="5" stdDeviation="5" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#dtBg)"/>
+
+  <!-- Studio Floor with Reflections (Matching studio in danzaterapia.jpg) -->
+  <rect x="0" y="420" width="800" height="180" fill="url(#floorGrad)"/>
+  <line x1="0" y1="420" x2="800" y2="420" stroke="#94A3B8" stroke-width="2"/>
+
+  <!-- Large Dance Studio Windows Grid -->
+  <g stroke="#94A3B8" stroke-width="3" opacity="0.6">
+    <line x1="160" y1="40" x2="160" y2="420"/>
+    <line x1="320" y1="40" x2="320" y2="420"/>
+    <line x1="480" y1="40" x2="480" y2="420"/>
+    <line x1="640" y1="40" x2="640" y2="420"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+  </g>
+
+  <!-- Yellow Exercise / Therapy Balls (Matching yellow balls in reference) -->
+  <g filter="url(#dShadow)">
+    <circle cx="160" cy="220" r="22" fill="#EAB308"/>
+    <circle cx="430" cy="160" r="22" fill="#EAB308"/>
+  </g>
+
+  <!-- Three Dancers in Expressive Dynamic Somatic Movement -->
+  <!-- Dancer 1 (Left - purple top & black pants, holding ball) -->
+  <g filter="url(#dShadow)">
+    <!-- Head -->
+    <circle cx="240" cy="210" r="16" fill="#D4A373"/>
+    <!-- Torso (Purple) -->
+    <path d="M 230,225 L 250,225 L 255,300 L 225,300 Z" fill="#7E22CE"/>
+    <!-- Extended Arms -->
+    <path d="M 160,220 L 230,230" stroke="#D4A373" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 250,230 L 290,260" stroke="#D4A373" stroke-width="8" stroke-linecap="round"/>
+    <!-- Legs (Left balancing, Right extended horizontal) -->
+    <path d="M 235,300 L 235,420" stroke="#1E1E1E" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 250,300 L 340,360" stroke="#1E1E1E" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <!-- Dancer 2 (Center - stretching pose with pink/magenta pants) -->
+  <g filter="url(#dShadow)">
+    <circle cx="430" cy="240" r="15" fill="#D4A373"/>
+    <path d="M 420,255 L 440,255 L 445,315 L 415,315 Z" fill="#1E293B"/>
+    <path d="M 430,260 L 430,180" stroke="#D4A373" stroke-width="7" stroke-linecap="round"/>
+    <!-- Legs in wide extension -->
+    <path d="M 420,315 L 420,420" stroke="#DB2777" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 440,315 L 520,330" stroke="#DB2777" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <!-- Dancer 3 (Right - white top, grey pants, leg extended sideways) -->
+  <g filter="url(#dShadow)">
+    <circle cx="620" cy="190" r="16" fill="#D4A373"/>
+    <path d="M 610,205 L 630,205 L 635,280 L 605,280 Z" fill="#F8FAFC"/>
+    <path d="M 605,215 L 530,220" stroke="#D4A373" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 630,215 L 700,210" stroke="#D4A373" stroke-width="8" stroke-linecap="round"/>
+    <!-- Legs -->
+    <path d="M 615,280 L 615,420" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
+    <path d="M 630,280 L 730,310" stroke="#475569" stroke-width="12" stroke-linecap="round"/>
+  </g>
+
+  <!-- Movement energy arcs -->
+  <path d="M 160,220 C 240,160 360,180 430,160" fill="none" stroke="#F59E0B" stroke-width="3" stroke-dasharray="4 4" opacity="0.7"/>
+
+  <!-- Label Badge -->
+  <rect x="250" y="530" width="300" height="36" rx="18" fill="#1E293B" opacity="0.9"/>
+  <text x="400" y="553" font-family="sans-serif" font-size="13" font-weight="bold" fill="#F5EBD7" text-anchor="middle" letter-spacing="1">DANZATERAPIA &amp; LIBERACIÓN SOMÁTICA</text>
+</svg>

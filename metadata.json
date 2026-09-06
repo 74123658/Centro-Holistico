@@ -1,0 +1,6 @@
+{
+  "name": "Equilibria - Centro Holístico",
+  "description": "Aplicación móvil para gestionar citas y consultar servicios de bienestar en tiempo real en Equilibria Zen & Garden.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

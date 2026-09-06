@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="fbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F9F5F0"/>
+      <stop offset="100%" stop-color="#EBE0D2"/>
+    </linearGradient>
+    <linearGradient id="amberGlass" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5B2E0A"/>
+      <stop offset="35%" stop-color="#9C5216"/>
+      <stop offset="70%" stop-color="#C67024"/>
+      <stop offset="100%" stop-color="#4E2304"/>
+    </linearGradient>
+    <linearGradient id="violetDrop" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D8B4E2"/>
+      <stop offset="100%" stop-color="#9B5DE5"/>
+    </linearGradient>
+    <filter id="fShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="3" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#fbBg)"/>
+
+  <!-- Floral Background Motifs (Bach Flowers in magenta, violet, and green) -->
+  <g opacity="0.35">
+    <circle cx="200" cy="180" r="70" fill="#E8B4D8"/>
+    <circle cx="160" cy="130" r="50" fill="#D291BC"/>
+    <circle cx="250" cy="130" r="50" fill="#D291BC"/>
+    <circle cx="600" cy="220" r="90" fill="#C9A0DC"/>
+    <circle cx="650" cy="160" r="60" fill="#B388EB"/>
+    <circle cx="560" cy="150" r="60" fill="#B388EB"/>
+  </g>
+
+  <!-- Amber Glass Bottle (Frasco de Tintura / Esencia Floral) -->
+  <g filter="url(#fShadow)">
+    <!-- Bottle Body -->
+    <rect x="330" y="270" width="140" height="230" rx="24" fill="url(#amberGlass)" stroke="#3E1A02" stroke-width="2"/>
+    <!-- Bottle Shoulder -->
+    <path d="M 350,270 C 360,230 380,210 380,195 L 420,195 C 420,210 440,230 450,270 Z" fill="url(#amberGlass)"/>
+    <!-- Glass Highlights -->
+    <path d="M 345,285 L 345,475" stroke="#FFFFFF" stroke-width="5" opacity="0.3" stroke-linecap="round"/>
+    <!-- Label -->
+    <rect x="345" y="310" width="110" height="120" rx="8" fill="#FDFBF7" stroke="#DECBAF" stroke-width="1.5"/>
+    <text x="400" y="340" font-family="serif" font-size="12" font-weight="bold" fill="#3B2D19" text-anchor="middle">FLORES DE BACH</text>
+    <text x="400" y="358" font-family="sans-serif" font-size="9" fill="#7A6448" text-anchor="middle">FÓRMULA PERSONAL</text>
+    <line x1="365" y1="368" x2="435" y2="368" stroke="#DECBAF" stroke-width="1"/>
+    <text x="400" y="385" font-family="serif" font-size="18" fill="#9B5DE5" text-anchor="middle">❧</text>
+    <text x="400" y="405" font-family="sans-serif" font-size="8" fill="#8C765C" text-anchor="middle">MICRODOSIS HERBAL</text>
+  </g>
+
+  <!-- Glass Pipette / Dropper Dispensing a Healing Drop -->
+  <g filter="url(#fShadow)">
+    <!-- Dropper Pipette Glass Tube angled -->
+    <line x1="280" y1="60" x2="395" y2="190" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" opacity="0.85"/>
+    <line x1="280" y1="60" x2="395" y2="190" stroke="#B8C5D6" stroke-width="2" stroke-linecap="round"/>
+    <!-- Fluid inside dropper -->
+    <line x1="310" y1="95" x2="385" y2="180" stroke="url(#violetDrop)" stroke-width="10" stroke-linecap="round"/>
+    
+    <!-- Dropper Tip -->
+    <path d="M 395,190 L 400,205 L 392,205 Z" fill="#D8B4E2"/>
+
+    <!-- Falling Floral Elixir Drop -->
+    <path d="M 400,218 C 392,225 388,235 396,243 C 404,250 414,244 412,234 C 410,226 404,220 400,218 Z" fill="url(#violetDrop)"/>
+    <circle cx="398" cy="232" r="2.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Label Badge -->
+  <rect x="250" y="530" width="300" height="36" rx="18" fill="#3B2D19" opacity="0.9"/>
+  <text x="400" y="553" font-family="sans-serif" font-size="13" font-weight="bold" fill="#F5EBD7" text-anchor="middle" letter-spacing="1">FLORES DE BACH &amp; MICRODOSIS</text>
+</svg>
