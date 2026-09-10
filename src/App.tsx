@@ -11,7 +11,7 @@ import { RescheduleModal } from './components/RescheduleModal';
 import { Appointment } from './types';
 import { INITIAL_APPOINTMENTS, DISPLAY_PHONE } from './data/mockData';
 import { Smartphone, Monitor, CheckCircle2 } from 'lucide-react';
-
+import { createWhatsAppInquiryUrl } from './utils/whatsapp';
 export default function App() {
   const [activeTab, setActiveTab] = useState<TabType>('servicios');
   const [isMobileFrame, setIsMobileFrame] = useState<boolean>(false);
@@ -70,11 +70,13 @@ export default function App() {
   };
 
   // Open clean booking modal
-  const handleOpenGeneralBooking = () => {
-    setPreselectedServiceId(null);
-    setPreselectedTherapistId(null);
-    setIsBookingModalOpen(true);
-  };
+ const handleOpenGeneralBooking = () => {
+  const url = createWhatsAppInquiryUrl(
+    'Hola Equilibria, me comunico desde la app para solicitar una cita. ¿Me pueden compartir terapias y disponibilidad?'
+  );
+
+  window.open(url, '_blank');
+
 
   // Save new appointment
   const handleSaveAppointment = (newAppointment: Appointment) => {
