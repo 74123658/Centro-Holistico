@@ -6,6 +6,9 @@ import { createWhatsAppInquiryUrl } from '../utils/whatsapp';
 import { getTherapistPhoto } from '../utils/therapistPhotos';
 import { getServicePhoto } from '../utils/servicePhotos';
 import { TherapistAvatar } from './TherapistAvatar';
+import { MassageIntakeModal } from './MassageIntakeModal';
+import { RentalQuoteSection } from './RentalQuoteSection';
+import { MonthlyEventsSection } from './MonthlyEventsSection';
 
 interface LiveServicesViewProps {
   onSelectServiceForBooking: (serviceId: string) => void;
@@ -17,6 +20,7 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<ServiceCategory>('Todos');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedDetailService, setSelectedDetailService] = useState<Service | null>(null);
+  const [showMassageForm, setShowMassageForm] = useState(false);
 
   const categories: ServiceCategory[] = [
     'Todos',
@@ -49,7 +53,7 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
         <div className="flex items-center justify-between">
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#9C702E] flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-[#2E6B47] animate-pulse"></span>
-            Disponibilidad en Tiempo Real
+            Catálogo de Terapias
           </span>
           <span className="text-[10px] bg-[#2E6B47] text-white px-2 py-0.5 rounded-full font-bold">
             Pachuca • Presencial & Zoom
@@ -193,11 +197,11 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
                   <div className="absolute bottom-2.5 left-2.5 right-2.5 flex items-center justify-between text-white">
                     <span className="text-[10px] bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded-full flex items-center gap-1">
                       <Clock className="w-3 h-3 text-[#D4AF37]" />
-                      <span>{srv.durationMinutes} min</span>
+                      <span>{srv.id.startsWith('constelaciones') ? 'Duración por confirmar' : `${srv.durationMinutes} min`}</span>
                     </span>
 
                     <span className="text-[10px] font-bold bg-[#2E6B47] text-white px-2 py-0.5 rounded-full shadow-xs">
-                      {srv.liveStatus === 'pocos_cupos' ? 'Últimos cupos' : '● Libre hoy'}
+                      Consultar disponibilidad
                     </span>
                   </div>
                 </div>
@@ -263,7 +267,13 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
                       </button>
 
                       <button
-                        onClick={() => onSelectServiceForBooking(srv.id)}
+                        onClick={() => {
+                          if (srv.id === 'masaje-terapeutico') {
+                            setShowMassageForm(true);
+                          } else {
+                            window.open(createWhatsAppInquiryUrl(`Hola Equilibria, me interesa *${srv.name}*. ¿Me pueden compartir disponibilidad e información para solicitar una cita?`), '_blank');
+                          }
+                        }}
                         className="px-3 py-1.5 bg-[#4A3B22] hover:bg-[#382C18] text-white text-xs font-bold rounded-xl shadow-xs transition transform active:scale-95 cursor-pointer"
                       >
                         Agendar
@@ -316,7 +326,7 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
               <div className={`grid ${selectedDetailService.price ? 'grid-cols-3' : 'grid-cols-2'} gap-2 text-center bg-white p-3 rounded-xl border border-[#EADBCA]`}>
                 <div>
                   <span className="text-[10px] text-[#9A7030] font-semibold block">Duración</span>
-                  <span className="font-bold text-xs text-[#382B18]">{selectedDetailService.durationMinutes} min</span>
+                  <span className="font-bold text-xs text-[#382B18]">{selectedDetailService.id.startsWith('constelaciones') ? 'Por confirmar' : `${selectedDetailService.durationMinutes} min`}</span>
                 </div>
                 {selectedDetailService.price ? (
                   <div>
@@ -392,22 +402,11 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
 
                 <button
                   onClick={() => {
-                    const srvId = selectedDetailService.id;
+                    const srv = selectedDetailService;
                     setSelectedDetailService(null);
-                    onSelectServiceForBooking(srvId);
+                    if (srv.id === 'masaje-terapeutico') {
+                      setShowMassageForm(true);
+                    } else {
+                      window.open(createWhatsAppInquiryUrl(`Hola Equilibria, me interesa *${srv.name}*. ¿Me pueden compartir disponibilidad e información para solicitar una cita?`), '_blank');
+                    }
                   }}
-                  className="flex-1 py-2.5 bg-[#4A3B22] hover:bg-[#382C18] text-white font-bold rounded-xl text-xs shadow-xs transition"
-                >
-                  Agendar Esta Sesión Ahora
-                </button>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-      )}
-
-    </div>
-  );
-};
