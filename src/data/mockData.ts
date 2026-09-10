@@ -1,7 +1,7 @@
 import { Service, Therapist, Appointment, ScheduleClass } from '../types';
 
-export const WHATSAPP_PHONE = "527717486793";
-export const DISPLAY_PHONE = "771 748 6793";
+export const WHATSAPP_PHONE = "527714845326";
+export const DISPLAY_PHONE = "771 484 5326";
 export const ADDITIONAL_PHONES = ["771 910 0843", "771 118 4774"];
 export const CENTER_ADDRESS = "Av. Miguel Hidalgo 230-296, Campestre Villas del Álamo, C.P. 42074 Pachuca, Hgo.";
 
