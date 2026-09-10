@@ -355,12 +355,16 @@ export const TherapistsView: React.FC<TherapistsViewProps> = ({
                     <MessageCircle className="w-4 h-4 text-[#25D366]" />
                   </a>
 
-                  <button
-                    onClick={() => onSelectTherapistForBooking(therapist.id)}
-                    className="px-3.5 py-1.5 bg-[#4A3B22] hover:bg-[#382C18] text-white text-xs font-bold rounded-xl shadow-xs transition transform active:scale-95"
-                  >
-                    Agendar Cita
-                  </button>
+                  <a
+  href={createWhatsAppInquiryUrl(
+    `Hola Equilibria, me interesa solicitar una cita con ${therapist.name}. ¿Me pueden compartir disponibilidad e información?`
+  )}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-3.5 py-1.5 bg-[#4A3B22] hover:bg-[#382C18] text-white text-xs font-bold rounded-xl shadow-xs transition"
+>
+  Solicitar
+</a>
                 </div>
               </div>
 
