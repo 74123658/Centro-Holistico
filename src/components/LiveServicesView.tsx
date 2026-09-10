@@ -270,7 +270,7 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
                         }}
                         className="px-3 py-1.5 bg-[#4A3B22] hover:bg-[#382C18] text-white text-xs font-bold rounded-xl shadow-xs transition transform active:scale-95 cursor-pointer"
                       >
-                        Agendar
+                        Solicitar
                       </button>
                     </div>
                   </div>
