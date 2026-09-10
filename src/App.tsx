@@ -75,11 +75,11 @@ export default function App() {
     'Hola Equilibria, me comunico desde la app para solicitar una cita. ¿Me pueden compartir terapias y disponibilidad?'
   );
 
-  window.open(url, '_blank');
+window.open(url, '_blank');
+};
 
-
-  // Save new appointment
-  const handleSaveAppointment = (newAppointment: Appointment) => {
+// Save new appointment
+const handleSaveAppointment = (newAppointment: Appointment) => {
     setAppointments(prev => [newAppointment, ...prev]);
     showToast(`¡Cita ${newAppointment.code} registrada con éxito!`);
   };
