@@ -319,10 +319,9 @@ export const TherapistsView: React.FC<TherapistsViewProps> = ({
 
               {/* Acciones */}
               <div className="pt-3 border-t border-[#F2E7D5] flex items-center justify-between gap-2">
-                <div className="flex items-center gap-1 text-[11px] text-[#2E6B47] font-semibold">
-                  <span className="w-2 h-2 rounded-full bg-[#2E6B47]"></span>
-                  <span>{therapist.availableToday ? `${therapist.activeSlotsCount} turnos hoy` : 'Agenda semanal'}</span>
-                </div>
+           
+
+
 
                 <div className="flex items-center gap-2">
                   {hasFlyer && (
