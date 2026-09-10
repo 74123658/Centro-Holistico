@@ -410,3 +410,22 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
                       window.open(createWhatsAppInquiryUrl(`Hola Equilibria, me interesa *${srv.name}*. ¿Me pueden compartir disponibilidad e información para solicitar una cita?`), '_blank');
                     }
                   }}
+                  className="flex-1 py-2.5 bg-[#4A3B22] hover:bg-[#382C18] text-white font-bold rounded-xl text-xs shadow-xs transition"
+                >
+                  Solicitar disponibilidad
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      <MonthlyEventsSection />
+      <RentalQuoteSection />
+
+      {showMassageForm && <MassageIntakeModal onClose={() => setShowMassageForm(false)} />}
+    </div>
+  );
+};
