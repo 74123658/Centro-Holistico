@@ -565,7 +565,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 type="submit"
                 className="w-full py-3 bg-gradient-to-r from-[#4A3B22] to-[#695333] hover:from-[#3B2D19] hover:to-[#564228] text-white font-bold rounded-xl text-xs sm:text-sm shadow-md transition"
               >
-                Confirmar y Registrar Mi Cita ✨
+               Preparar solicitud por WhatsApp✨
               </button>
             </form>
           )}
