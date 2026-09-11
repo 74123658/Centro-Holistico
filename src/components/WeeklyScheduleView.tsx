@@ -87,13 +87,7 @@ export const WeeklyScheduleView: React.FC = () => {
                   </h3>
                 </div>
 
-                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                  availableSpots <= 2
-                    ? 'bg-[#FDEED9] text-[#A65B17]'
-                    : 'bg-[#EAF5ED] text-[#2E6B47]'
-                }`}>
-                  {availableSpots} cupos libres
-                </span>
+                
               </div>
 
               {/* Próxima fecha exacta: Día, Mes y Año */}
