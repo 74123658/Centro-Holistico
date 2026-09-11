@@ -156,7 +156,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 {step === 2 && 'Elige a tu Terapeuta'}
                 {step === 3 && 'Fecha y Horario en Vivo'}
                 {step === 4 && 'Tus Datos de Contacto'}
-                {step === 5 && 'Cita Confirmada con Éxito'}
+                {step === 5 && 'Solicitud Preparada'}
               </h2>
             </div>
           </div>
