@@ -31,9 +31,11 @@ export const WeeklyScheduleView: React.FC = () => {
           <span className="text-[10px] font-bold uppercase tracking-widest text-[#9C702E]">
             Clases Grupales
           </span>
-          <span className="text-[10px] bg-[#2E6B47] text-white px-2 py-0.5 rounded-full font-bold">
-            Cupo Limitado
-          </span>
+          <div className="flex items-center justify-between">
+  <span className="text-[10px] font-bold uppercase tracking-widest text-[#9C702E]">
+    Clases Grupales
+  </span>
+</div>
         </div>
         <h2 className="font-serif-title text-lg font-bold text-[#3B2D19] mt-1">
           Programa Semanal de Bienestar
