@@ -116,13 +116,13 @@ export const HolisticDiagnostic: React.FC<HolisticDiagnosticProps> = ({
       {/* Header */}
       <div className="bg-gradient-to-r from-[#F9EED9] via-[#FAF3E6] to-[#F5EAD4] p-4 rounded-2xl border border-[#E5D2B4] shadow-xs text-center">
         <span className="text-[10px] font-bold uppercase tracking-widest text-[#9C702E]">
-          Evaluador Holístico
+          Orientador de Bienestar
         </span>
         <h2 className="font-serif-title text-lg font-bold text-[#3B2D19] mt-1">
           ¿Qué necesita tu Ser hoy?
         </h2>
         <p className="text-xs text-[#705E47] mt-0.5 max-w-sm mx-auto">
-          Selecciona lo que sientes y te indicaremos la terapeuta y terapia ideal para tu momento actual.
+          Selecciona cómo te sientes o qué deseas trabajar y te mostraremos opciones de bienestar que puedes consultar con Equilibria.
         </p>
       </div>
 
@@ -130,7 +130,7 @@ export const HolisticDiagnostic: React.FC<HolisticDiagnosticProps> = ({
       <div className="bg-white rounded-2xl p-4 sm:p-5 border border-[#EADBCA] shadow-xs space-y-4">
         <div>
           <label className="block text-xs font-bold text-[#57442B] uppercase tracking-wider mb-2">
-            1. Selecciona tus síntomas o necesidades presentes:
+            1. Selecciona lo que deseas trabajar o explorar:
           </label>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {symptomOptions.map((sym) => {
