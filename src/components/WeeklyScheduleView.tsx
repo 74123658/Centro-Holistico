@@ -128,23 +128,17 @@ export const WeeklyScheduleView: React.FC = () => {
                   <span>Pedir informes</span>
                 </a>
 
-                <button
-                  onClick={() => handleReserve(cls.id, cls.title)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1 ${
-                    isReserved
-                      ? 'bg-[#2E6B47] text-white'
-                      : 'bg-[#4A3B22] hover:bg-[#382C18] text-white shadow-xs'
-                  }`}
-                >
-                  {isReserved ? (
-                    <>
-                      <Check className="w-3.5 h-3.5" />
-                      <span>Lugar Reservado</span>
-                    </>
-                  ) : (
-                    <span>Apartar Lugar</span>
-                  )}
-                </button>
+               <a
+  href={createWhatsAppInquiryUrl(
+    `Hola Equilibria, me interesa ${cls.title}. ¿Me pueden confirmar disponibilidad, fecha, horario y costo?`
+  )}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-3.5 py-1.5 rounded-xl bg-[#4A3B22] hover:bg-[#382C18] text-white text-xs font-bold transition flex items-center gap-1"
+>
+  <MessageCircle className="w-3.5 h-3.5" />
+  <span>Consultar por WhatsApp</span>
+</a>
               </div>
             </div>
           );
