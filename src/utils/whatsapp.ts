@@ -3,19 +3,17 @@ import { Appointment } from '../types';
 import { formatFullDate } from './dateFormat';
 
 export function createWhatsAppBookingUrl(apt: Appointment): string {
-  const text = `🌸 *Cita Confirmada - Equilibria Zen & Garden*
-Código: *${apt.code}*
+  const text = `🌿 *Solicitud de cita - Equilibria Zen & Garden*
+
 Servicio: *${apt.serviceName}*
-Terapeuta: *${apt.therapistName}*
-Fecha: *${formatFullDate(apt.date)}*
-Hora: *${apt.time}* (${apt.durationMinutes} min)
-Modalidad: *${apt.modality}*
-${apt.price ? `Inversión: *$${apt.price} MXN*\n` : ''}
+Terapeuta solicitada: *${apt.therapistName}*
 Paciente: *${apt.clientName}*
 Teléfono: *${apt.clientPhone}*
-${apt.notes ? `Motivo / Intención: _"${apt.notes}"_` : ''}
+${apt.notes ? `Motivo / Intención: _"${apt.notes}"_\n` : ''}
 
-Por favor confirmar disponibilidad en su sistema. ¡Muchas gracias!`;
+Solicito confirmar disponibilidad, fecha, horario y costo directamente por WhatsApp.
+
+Muchas gracias.`;
 
   return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`;
 }
