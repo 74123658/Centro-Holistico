@@ -208,7 +208,7 @@ export const HolisticDiagnostic: React.FC<HolisticDiagnosticProps> = ({
           onClick={handleDiagnose}
           className="w-full py-3 bg-[#4A3B22] hover:bg-[#382C18] disabled:opacity-50 text-white font-bold rounded-xl text-xs sm:text-sm shadow-xs transition"
         >
-          {selectedSymptoms.length === 0 ? 'Selecciona al menos 1 síntoma' : 'Obtener Mi Plan de Sanación ✨'}
+          {selectedSymptoms.length === 0 ? 'Selecciona al menos 1 necesidad' : 'Ver mi orientación personalizada ✨'}
         </button>
       </div>
 
@@ -217,10 +217,10 @@ export const HolisticDiagnostic: React.FC<HolisticDiagnosticProps> = ({
         <div className="bg-gradient-to-br from-[#FFFDF9] via-[#FAF3E6] to-[#F5EAD4] p-4 sm:p-5 rounded-2xl border-2 border-[#D9C199] shadow-xs space-y-4 animate-in fade-in duration-200">
           <div>
             <span className="text-[10px] font-bold uppercase tracking-widest text-[#9C702E]">
-              Diagnóstico Recomendado
+              Orientación de Bienestar
             </span>
             <h3 className="font-serif-title text-base font-bold text-[#3B2D19] mt-0.5">
-              Tu Ruta de Armonización
+              Opciones recomendadas para ti
             </h3>
           </div>
 
@@ -233,16 +233,20 @@ export const HolisticDiagnostic: React.FC<HolisticDiagnosticProps> = ({
               className="border border-[#DFCEB3] shrink-0"
             />
             <div className="flex-1 min-w-0">
-              <span className="text-[10px] font-bold text-[#9C702E] uppercase">Especialista ideal:</span>
+              <span className="text-[10px] font-bold text-[#9C702E] uppercase">Terapeuta sugerida:</span>
               <h4 className="font-bold text-xs text-[#382B18]">{result.therapist.name}</h4>
               <p className="text-[10px] text-[#7A664E] truncate">{result.therapist.title}</p>
             </div>
-            <button
-              onClick={() => onSelectTherapistForBooking(result.therapist.id)}
-              className="px-3 py-1.5 bg-[#4A3B22] text-white text-xs font-semibold rounded-lg shadow-xs transition flex-shrink-0"
-            >
-              Agendar
-            </button>
+            <a
+  href={createWhatsAppInquiryUrl(
+    `Hola, me gustaría recibir información sobre una sesión con ${result.therapist.name}. ¿Me pueden confirmar disponibilidad, fecha y horario?`
+  )}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-3 py-1.5 bg-[#25D366] text-white text-xs font-semibold rounded-lg shadow-xs transition flex-shrink-0"
+>
+  Consultar por WhatsApp
+</a>
           </div>
 
           {/* Terapias recomendadas */}
@@ -257,12 +261,16 @@ export const HolisticDiagnostic: React.FC<HolisticDiagnosticProps> = ({
                     <h5 className="font-bold text-xs text-[#3B2D19]">{srv.name}</h5>
                     <p className="text-[11px] text-[#73624D]">{srv.desc}</p>
                   </div>
-                  <button
-                    onClick={() => onSelectServiceForBooking(srv.id)}
-                    className="px-3 py-1 bg-[#FAF4E8] hover:bg-[#F2E5CE] text-[#4A3B22] border border-[#DECBAF] text-xs font-semibold rounded-lg transition flex-shrink-0"
-                  >
-                    Agendar
-                  </button>
+                 <a
+  href={createWhatsAppInquiryUrl(
+    `Hola, me gustaría recibir información sobre ${srv.name}. ¿Me pueden confirmar disponibilidad, fecha y horario?`
+  )}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-3 py-1 bg-[#25D366] text-white text-xs font-semibold rounded-lg transition flex-shrink-0"
+>
+  Consultar por WhatsApp
+</a>
                 </div>
               ))}
             </div>
