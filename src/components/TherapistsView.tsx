@@ -106,14 +106,14 @@ export const TherapistsView: React.FC<TherapistsViewProps> = ({
             Círculo de Especialistas
           </span>
           <span className="text-[10px] bg-[#EAF5ED] text-[#2E6B47] px-2 py-0.5 rounded-full font-bold border border-[#D0EBD8]">
-            ● Agenda en Vivo
+            ● Consulta por WhatsApp
           </span>
         </div>
         <h2 className="font-serif-title text-lg font-bold text-[#3B2D19] mt-1">
           Nuestras Terapeutas Certificadas
         </h2>
         <p className="text-xs text-[#705E47] mt-0.5">
-          Especialistas con formación científica, clínica y holística para guiar tu proceso de bienestar integral.
+          Conoce a nuestras terapeutas, sus especialidades y enfoques de bienestar. Consulta disponibilidad directamente con Equilibria.
         </p>
       </div>
 
