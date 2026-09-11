@@ -569,70 +569,56 @@ export const BookingModal: React.FC<BookingModalProps> = ({
               </button>
             </form>
           )}
-
-          {/* PASO 5: CITA CONFIRMADA */}
+          {/* PASO 5: SOLICITUD PARA CONFIRMAR POR WHATSAPP */}
           {step === 5 && createdAppointment && (
             <div className="text-center space-y-4 py-2">
-              <div className="w-16 h-16 rounded-full bg-[#EAF5ED] text-[#2E6B47] flex items-center justify-center mx-auto border border-[#C6E6CE] shadow-xs">
+              <div className="w-16 h-16 rounded-full bg-[#EAF5ED] text-[#2E6B47] flex items-center justify-center mx-auto border border-[#C6E6CE]">
                 <Check className="w-8 h-8 stroke-[2.5]" />
               </div>
 
               <div>
-                <span className="text-[11px] font-bold tracking-widest text-[#2E6B47] uppercase">¡Reserva Registrada en Tiempo Real!</span>
-                <h3 className="font-serif-title text-xl font-bold text-[#3B2D19] mt-0.5">
-                  Cita Asignada con Éxito
+                <span className="text-[11px] font-bold tracking-widest text-[#2E6B47] uppercase">
+                  Solicitud preparada
+                </span>
+
+                <h3 className="font-serif-title text-xl font-bold text-[#3B2D19] mt-1">
+                  Confirma tu solicitud por WhatsApp
                 </h3>
-                <p className="text-xs text-[#705E47] mt-1">
-                  Tu turno ha sido bloqueado en el sistema de Equilibria.
+
+                <p className="text-xs text-[#705E47] mt-2">
+                  Equilibria confirmará directamente la disponibilidad, fecha y horario.
                 </p>
               </div>
 
-              {/* Ficha de la cita */}
-              <div className="bg-white p-4 rounded-2xl border-2 border-[#D9C199] text-left space-y-2 text-xs text-[#52412B] shadow-xs">
-                <div className="flex justify-between items-center border-b border-[#F0E4D0] pb-2">
-                  <div>
-                    <span className="text-[10px] text-[#9A7030] font-bold">Código de Cita:</span>
-                    <p className="font-mono text-sm font-extrabold text-[#3B2D19]">{createdAppointment.code}</p>
-                  </div>
-                  <span className="px-2.5 py-1 bg-[#EAF5ED] text-[#2E6B47] text-[10px] font-bold rounded-full border border-[#CEEAD6]">
-                    ● Confirmada
+              <div className="bg-white p-4 rounded-2xl border-2 border-[#D9C199] text-left space-y-2 text-xs text-[#52412B]">
+                <div>
+                  <span className="text-[10px] text-[#9A7030] font-bold">
+                    Servicio solicitado:
                   </span>
+                  <p className="font-bold text-[#382B18] text-sm">
+                    {createdAppointment.serviceName}
+                  </p>
                 </div>
 
                 <div>
-                  <span className="text-[10px] text-[#9A7030] font-bold">Servicio:</span>
-                  <p className="font-bold text-[#382B18] text-sm">{createdAppointment.serviceName}</p>
-                </div>
-
-                <div className="grid grid-cols-2 gap-2 pt-1 text-[11px]">
-                  <div>
-                    <span className="text-[#9A7030] font-semibold">Fecha y Hora:</span>
-                    <p className="font-bold text-[#3B2D19]">{formatFullDate(createdAppointment.date)}</p>
-                    <p className="text-[#695843]">{createdAppointment.time} ({createdAppointment.durationMinutes} min)</p>
-                  </div>
-                  <div>
-                    <span className="text-[#9A7030] font-semibold">Terapeuta:</span>
-                    <p className="font-bold text-[#3B2D19]">{createdAppointment.therapistName}</p>
-                    <p className="text-[#695843]">{createdAppointment.modality}</p>
-                  </div>
+                  <span className="text-[10px] text-[#9A7030] font-bold">
+                    Terapeuta solicitada:
+                  </span>
+                  <p className="font-bold text-[#3B2D19]">
+                    {createdAppointment.therapistName}
+                  </p>
                 </div>
 
                 {createdAppointment.price ? (
-                  <div className="pt-2 border-t border-[#F0E4D0] flex justify-between items-center text-xs">
-                    <span className="text-[#856D50]">Inversión a liquidar:</span>
-                    <span className="font-extrabold text-[#3B2D19] text-sm">${createdAppointment.price} MXN</span>
-                  </div>
-                ) : (
-                  <div className="pt-2 border-t border-[#F0E4D0] flex justify-between items-center text-xs">
+                  <div className="pt-2 border-t border-[#F0E4D0] flex justify-between items-center">
                     <span className="text-[#856D50]">Inversión:</span>
-                    <span className="text-xs font-semibold text-[#8C6424] bg-[#FAF3E6] border border-[#EADBCA] px-2 py-0.5 rounded-md">
-                      Costo por confirmar con recepción
+                    <span className="font-extrabold text-[#3B2D19]">
+                      ${createdAppointment.price} MXN
                     </span>
                   </div>
-                )}
+                ) : null}
               </div>
 
-              {/* Botón WhatsApp */}
               <div className="space-y-2 pt-2">
                 <a
                   href={createWhatsAppBookingUrl(createdAppointment)}
@@ -641,7 +627,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   className="w-full inline-flex items-center justify-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white py-3 px-4 rounded-xl text-xs sm:text-sm font-bold shadow-md transition"
                 >
                   <ExternalLink className="w-4 h-4" />
-                  <span>Enviar Confirmación a WhatsApp</span>
+                  Enviar solicitud por WhatsApp
                 </a>
 
                 <button
@@ -649,11 +635,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   onClick={handleResetAndClose}
                   className="w-full py-2.5 bg-[#ECE0CD] hover:bg-[#E2D2B8] text-[#4A3B22] font-semibold rounded-xl text-xs transition"
                 >
-                  Ir al Gestor de Mis Citas
+                  Cerrar
                 </button>
               </div>
             </div>
           )}
+          
 
         </div>
       </div>
