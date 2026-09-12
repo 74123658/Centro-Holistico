@@ -195,7 +195,7 @@ export const SERVICES: Service[] = [
       "Estimulación del sistema linfático e inmune"
     ],
     suitableFor: "Desintoxicación física, renacimiento espiritual, liberación de cargas emocionales y fatiga acumulada.",
-    liveStatus: "consultar",
+  liveStatus: "consultar",
 nextSlotTime: "Consultar",
     rating: 4.9,
     reviewCount: 48,
