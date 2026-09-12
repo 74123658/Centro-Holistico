@@ -343,7 +343,7 @@ export const SERVICES: Service[] = [
     category: "Emocional",
     desc: "Preparado floral y fitoterapéutico personalizado para estabilizar emociones difíciles.",
     longDesc: "Entrevista diagnóstica profunda para formular un frasco personalizado con esencias florales de Edward Bach y tinturas madre. Ayuda a superar duelos, miedos paralizantes, impaciencia y tristeza.",
-    durationMinutes: 50,
+    durationMinutes: 20,
     therapistIds: ["rosa-angeles", "mara-alejandra"],
     benefits: [
       "Estabilización de emociones sin efectos secundarios",
@@ -352,12 +352,13 @@ export const SERVICES: Service[] = [
       "Incluye frasco de tratamiento para 3 semanas"
     ],
     suitableFor: "Inestabilidad emocional, cambios de vida, hipersensibilidad, angustia o duelo.",
-    liveStatus: "disponible_hoy",
-    nextSlotTime: "14:00",
+    liveStatus: "consultar",
+nextSlotTime: "Consultar",
     rating: 4.8,
-    reviewCount: 35,
-    imageUrl: "/assets/flores-bach.svg",
-    modality: "Ambas"
+reviewCount: 35,
+price: 300,
+imageUrl: "/assets/flores-bach.svg",
+modality: "Presencial"
   },
   {
     id: "pendulo-hebreo",
