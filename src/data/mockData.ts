@@ -342,7 +342,7 @@ export const SERVICES: Service[] = [
     name: "Flores de Bach & Microdosis Herbal",
     category: "Emocional",
     desc: "Preparado floral y fitoterapéutico personalizado para estabilizar emociones difíciles.",
-    longDesc: "Entrevista diagnóstica profunda para formular un frasco personalizado con esencias florales de Edward Bach y tinturas madre. Ayuda a superar duelos, miedos paralizantes, impaciencia y tristeza.",
+    longDesc: Entrevista personalizada para formular un frasco personalizado con esencias florales de Edward Bach y tinturas madre. Ayuda a superar duelos, miedos paralizantes, impaciencia y tristeza.",
     durationMinutes: 20,
     therapistIds: ["rosa-angeles", "mara-alejandra"],
     benefits: [
