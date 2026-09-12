@@ -419,12 +419,12 @@ nextSlotTime: "Consultar",
       "Alivio progresivo de molestias psicosomáticas"
     ],
     suitableFor: "Síntomas físicos repetitivos, alergias, dolor crónico de origen emocional y patrones de conducta.",
-    liveStatus: "disponible_hoy",
-    nextSlotTime: "17:30",
+   liveStatus: "consultar",
+nextSlotTime: "Consultar",
     rating: 5.0,
     reviewCount: 42,
     imageUrl: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=600&q=80",
-    modality: "Ambas"
+    
   },
   {
     id: "danzaterapia",
