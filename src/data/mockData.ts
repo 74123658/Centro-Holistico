@@ -364,7 +364,7 @@ modality: "Presencial"
     id: "pendulo-hebreo",
     name: "Péndulo Hebreo & Cirugía Energética",
     category: "Espíritu",
-    desc: "Diagnóstico bioenergético, limpieza de miasmas y desparasitación energética profunda.",
+    desc: "Evaluación bioenergética, limpieza de miasmas y desparasitación energética profunda.",
     longDesc: "Terapia de alta frecuencia que utiliza las letras del alfabeto hebreo en resonancia para detectar bloqueos en los 7 cuerpos sutiles, limpiar energías densas y cerrar fisuras en el campo electromagnético.",
     durationMinutes: 60,
     therapistIds: ["mara-alejandra", "rosa-angeles"],
@@ -375,12 +375,12 @@ modality: "Presencial"
       "Corte de lazos energéticos nocivos"
     ],
     suitableFor: "Sensación de pesadez corporal, mala racha prolongada, agotamiento sin causa médica y densidad energética.",
-    liveStatus: "disponible_hoy",
-    nextSlotTime: "16:00",
+    liveStatus: "consultar",
+nextSlotTime: "Consultar",
     rating: 5.0,
     reviewCount: 28,
     imageUrl: "/assets/pendulo-hebreo.svg",
-    modality: "Ambas"
+   
   },
   {
     id: "registros-akashicos",
