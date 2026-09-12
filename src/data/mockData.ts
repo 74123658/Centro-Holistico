@@ -195,8 +195,8 @@ export const SERVICES: Service[] = [
       "Estimulación del sistema linfático e inmune"
     ],
     suitableFor: "Desintoxicación física, renacimiento espiritual, liberación de cargas emocionales y fatiga acumulada.",
-    liveStatus: "disponible_hoy",
-    nextSlotTime: "17:00",
+    liveStatus: "consultar",
+nextSlotTime: "Consultar",
     rating: 4.9,
     reviewCount: 48,
     imageUrl: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=600&q=80",
@@ -218,8 +218,8 @@ export const SERVICES: Service[] = [
       "Desbloqueo en áreas de creatividad y abundancia"
     ],
     suitableFor: "Insomnio, ansiedad profunda, sobrecarga mental, bloqueo de proyectos y estrés cotidiano.",
-    liveStatus: "disponible_hoy",
-    nextSlotTime: "12:30",
+   liveStatus: "consultar",
+nextSlotTime: "Consultar",
     rating: 5.0,
     reviewCount: 62,
     imageUrl: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80",
@@ -241,12 +241,12 @@ export const SERVICES: Service[] = [
       "Apertura del chakra del corazón y paz interior"
     ],
     suitableFor: "Angustia, desánimo, convalecencia, debilidad energética y necesidad de equilibrio espiritual.",
-    liveStatus: "pocos_cupos",
-    nextSlotTime: "15:00",
+   liveStatus: "consultar",
+nextSlotTime: "Consultar",
     rating: 4.9,
     reviewCount: 39,
     imageUrl: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80",
-    modality: "Ambas"
+    modality: "Presencial"
   },
   {
     id: "biomagnetismo",
@@ -285,12 +285,12 @@ export const SERVICES: Service[] = [
       "Armonización de relaciones de pareja y entre padres e hijos"
     ],
     suitableFor: "Conflictos de pareja o familia, duelos no resueltos, trabas económicas y lealtades invisibles.",
-    liveStatus: "pocos_cupos",
-    nextSlotTime: "11:00",
+    liveStatus: "consultar",
+nextSlotTime: "Consultar",
     rating: 5.0,
     reviewCount: 44,
     imageUrl: "https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=600&q=80",
-    modality: "Ambas",
+    modality: "Presencial",
     popular: true
   },
   {
@@ -308,8 +308,8 @@ export const SERVICES: Service[] = [
       "Alineación postural y sensación de renacimiento"
     ],
     suitableFor: "Dolores de espalda, cuello rígido, estrés muscular acumulado y fatiga física.",
-    liveStatus: "disponible_hoy",
-    nextSlotTime: "13:00",
+    liveStatus: "consultar",
+nextSlotTime: "Consultar",
     rating: 4.8,
     reviewCount: 57,
     imageUrl: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80",
@@ -331,8 +331,8 @@ export const SERVICES: Service[] = [
     ],
     suitableFor: "Adultos mayores, personas con fatiga mental, falta de concentración o estrés cognitivo.",
     liveStatus: "disponible_hoy",
-    nextSlotTime: "10:30",
-    rating: 4.9,
+    liveStatus: "consultar",
+nextSlotTime: "Consultar",
     reviewCount: 31,
     imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
     modality: "Presencial"
@@ -424,7 +424,7 @@ nextSlotTime: "Consultar",
     rating: 5.0,
     reviewCount: 42,
     imageUrl: "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&w=600&q=80",
-    
+    modality: "Presencial"
   },
   {
     id: "danzaterapia",
