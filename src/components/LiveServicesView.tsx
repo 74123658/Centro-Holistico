@@ -320,7 +320,7 @@ export const LiveServicesView: React.FC<LiveServicesViewProps> = ({
               <div className="grid grid-cols-2 gap-2 text-center bg-white p-3 rounded-xl border border-[#EADBCA]">
                 {!selectedDetailService.id.startsWith('constelaciones') && (
                   <div>
-                    <span className="text-[10px] text-[#9A7030] font-semibold block">Duración</span>
+                   <span className="text-[10px] text-[#9A7030] font-semibold block">Duración máxima</span>
                     <span className="font-bold text-xs text-[#382B18]">{selectedDetailService.durationMinutes} min</span>
                   </div>
                 )}
