@@ -9,7 +9,7 @@ import { WeeklyScheduleView } from './components/WeeklyScheduleView';
 import { BookingModal } from './components/BookingModal';
 import { RescheduleModal } from './components/RescheduleModal';
 import { Appointment } from './types';
-import { INITIAL_APPOINTMENTS, DISPLAY_PHONE } from './data/mockData';
+import { DISPLAY_PHONE } from './data/mockData';
 import { Smartphone, Monitor, CheckCircle2 } from 'lucide-react';
 import { createWhatsAppInquiryUrl } from './utils/whatsapp';
 export default function App() {
@@ -26,7 +26,7 @@ export default function App() {
     } catch (e) {
       console.warn('LocalStorage error', e);
     }
-    return INITIAL_APPOINTMENTS;
+    return [];
   });
 
   useEffect(() => {
