@@ -1,4 +1,4 @@
-import { Service, Therapist, Appointment, ScheduleClass } from '../types';
+import { Service, Therapist, ScheduleClass } from '../types';
 
 export const WHATSAPP_PHONE = "527714845326";
 export const DISPLAY_PHONE = "771 484 5326";
