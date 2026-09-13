@@ -66,7 +66,7 @@ export const WeeklyScheduleView: React.FC = () => {
       <div className="space-y-3">
         {filteredClasses.map((cls) => {
           const isReserved = !!reservedClasses[cls.id];
-          const availableSpots = isReserved ? cls.spotsRemaining - 1 : cls.spotsRemaining;
+         
           const nextDate = getNextDateForSchedule(cls.day);
 
           return (
