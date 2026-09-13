@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { BottomNav, TabType } from './components/BottomNav';
 import { LiveServicesView } from './components/LiveServicesView';
-import { AppointmentsManager } from './components/AppointmentsManager';
+
 import { TherapistsView } from './components/TherapistsView';
 import { HolisticDiagnostic } from './components/HolisticDiagnostic';
 import { WeeklyScheduleView } from './components/WeeklyScheduleView';
@@ -202,14 +202,7 @@ const handleSaveAppointment = (newAppointment: Appointment) => {
             />
           )}
 
-          {activeTab === 'citas' && (
-            <AppointmentsManager
-              appointments={appointments}
-              onOpenBooking={handleOpenGeneralBooking}
-              onOpenReschedule={(apt) => setReschedulingAppointment(apt)}
-              onCancelAppointment={handleCancelAppointment}
-            />
-          )}
+         
 
           {activeTab === 'terapeutas' && (
             <TherapistsView
