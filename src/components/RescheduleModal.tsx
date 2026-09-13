@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Calendar as CalendarIcon, Clock, AlertCircle, Check, Send } from 'lucide-react';
 import { Appointment } from '../types';
-import { AVAILABLE_TIME_SLOTS } from '../data/mockData';
+
 import { createWhatsAppRescheduleUrl } from '../utils/whatsapp';
 import { formatFullDate, getUpcomingDays } from '../utils/dateFormat';
 
@@ -140,40 +140,7 @@ export const RescheduleModal: React.FC<RescheduleModalProps> = ({
                 </div>
               </div>
 
-              {/* Selector de Nuevo Horario */}
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <label className="text-[11px] font-bold text-[#57442B] uppercase tracking-wider">
-                    2. Elige el nuevo horario disponible:
-                  </label>
-                  <span className="text-[10px] text-[#2E6B47] font-semibold">● En vivo</span>
-                </div>
-
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                  {AVAILABLE_TIME_SLOTS.map((slot) => {
-                    const isSelected = newTime === slot.time;
-                    return (
-                      <button
-                        key={slot.time}
-                        type="button"
-                        onClick={() => setNewTime(slot.time)}
-                        className={`p-2.5 rounded-xl border text-xs font-semibold flex items-center justify-between transition ${
-                          isSelected
-                            ? 'bg-[#5B472A] text-white border-[#5B472A] shadow-xs'
-                            : 'bg-white border-[#E5D7C2] text-[#4A3B22] hover:bg-[#FAF4E8]'
-                        }`}
-                      >
-                        <span>{slot.time}</span>
-                        <span className={`text-[9px] px-1 py-0.5 rounded font-bold ${
-                          isSelected ? 'bg-white/20 text-white' : 'bg-[#EAF5ED] text-[#2E6B47]'
-                        }`}>
-                          Libre
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
+             
 
               <div className="pt-2">
                 <button
