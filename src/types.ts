@@ -45,12 +45,10 @@ export interface Therapist {
   specialties: string[];
   gender: string;
   photoUrl: string;
-  availableToday: boolean;
-  activeSlotsCount: number;
-  badge: string;
-  phoneMsgCode: string;
-  localPhotoPath?: string;
-  accreditations?: string[];
+badge: string;
+phoneMsgCode: string;
+localPhotoPath?: string;
+accreditations?: string[];
   secondarySpecialties?: { category: string; items: string[] }[];
 }
 
