@@ -330,10 +330,11 @@ const selectedTime = 'Por confirmar';
                   >
                     <MapPin className="w-3.5 h-3.5" />
                     <span>Presencial (Pachuca)</span>
-                 
-              </div>
+                     </button>
+    </div>
+  </div>
 
-              {/* Selector de Fechas Rápido */}
+  {/* Selector de Fechas Rápido */}
               <div>
                 <div className="flex items-center justify-between mb-2">
                   <label className="text-[11px] font-bold text-[#57442B] uppercase tracking-wider">
