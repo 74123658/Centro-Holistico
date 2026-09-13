@@ -69,27 +69,23 @@ const selectedTime = 'Por confirmar';
     setStep(2);
   };
 
-  const handleTherapistSelect = (therapistId: string) => {
-    setSelectedTherapistId(therapistId);
-    setStep(3);
-  };
-
-  const handleDateTimeConfirm = () => {
+const handleDateTimeConfirm = () => {
   if (!selectedDate) {
     setValidationError('Por favor selecciona una fecha.');
     return;
   }
+
   setValidationError('');
   setStep(4);
-};setStep(4);
-  };
+};
 
-  const handleFinalSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!clientName.trim() || !clientPhone.trim()) {
-      setValidationError('Por favor ingresa tu nombre y número de teléfono.');
-      return;
-    }
+const handleFinalSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+
+  if (!clientName.trim() || !clientPhone.trim()) {
+    setValidationError('Por favor ingresa tu nombre y número de teléfono.');
+    return;
+  }
 
     // Determine therapist
     let therapist = THERAPISTS.find(t => t.id === selectedTherapistId);
