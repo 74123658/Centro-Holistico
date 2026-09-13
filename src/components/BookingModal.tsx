@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Check, Calendar as CalendarIcon, Clock, User, Phone, Sparkles, MapPin, Video, AlertCircle, ExternalLink, ChevronRight, ArrowLeft } from 'lucide-react';
+import { X, Check, Calendar as CalendarIcon, Clock, User, Phone, Sparkles, MapPin, AlertCircle, ExternalLink, ChevronRight, ArrowLeft } from 'lucide-react';
 import { Service, Therapist, Appointment } from '../types';
 import { SERVICES, THERAPISTS } from '../data/mockData';
 import { createWhatsAppBookingUrl } from '../utils/whatsapp';
@@ -27,12 +27,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   // Form State
   const [selectedServiceId, setSelectedServiceId] = useState<string>(preselectedServiceId || SERVICES[0].id);
   const [selectedTherapistId, setSelectedTherapistId] = useState<string>(preselectedTherapistId || '');
-  const [selectedModality, setSelectedModality] = useState<'Presencial' | 'En línea'>('Presencial');
+  const selectedModality = 'Presencial' as const;
   
   // Date & Time
   const todayStr = new Date().toISOString().slice(0, 10);
   const [selectedDate, setSelectedDate] = useState<string>(todayStr);
-  const [selectedTime, setSelectedTime] = useState<string>('11:00 AM');
+const selectedTime = 'Por confirmar';
 
   // Client Details
   const [clientName, setClientName] = useState<string>('');
@@ -75,12 +75,13 @@ export const BookingModal: React.FC<BookingModalProps> = ({
   };
 
   const handleDateTimeConfirm = () => {
-    if (!selectedDate || !selectedTime) {
-      setValidationError('Por favor selecciona una fecha y un horario.');
-      return;
-    }
-    setValidationError('');
-    setStep(4);
+  if (!selectedDate) {
+    setValidationError('Por favor selecciona una fecha.');
+    return;
+  }
+  setValidationError('');
+  setStep(4);
+};setStep(4);
   };
 
   const handleFinalSubmit = (e: React.FormEvent) => {
@@ -320,7 +321,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 <div className="grid grid-cols-2 gap-2">
                   <button
                     type="button"
-                    onClick={() => setSelectedModality('Presencial')}
+                   
                     className={`p-2.5 rounded-xl border text-xs font-semibold flex items-center justify-center gap-2 transition ${
                       selectedModality === 'Presencial'
                         ? 'bg-[#4A3B22] text-white border-[#4A3B22]'
@@ -329,29 +330,7 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                   >
                     <MapPin className="w-3.5 h-3.5" />
                     <span>Presencial (Pachuca)</span>
-                  </button>
-
-                  <button
-                    type="button"
-                    onClick={() => setSelectedModality('En línea')}
-                    disabled={selectedService.modality === 'Presencial'}
-                    className={`p-2.5 rounded-xl border text-xs font-semibold flex items-center justify-center gap-2 transition ${
-                      selectedModality === 'En línea'
-                        ? 'bg-[#4A3B22] text-white border-[#4A3B22]'
-                        : selectedService.modality === 'Presencial'
-                        ? 'bg-[#EFE9DF] text-[#A69784] border-[#E0D7C9] cursor-not-allowed opacity-60'
-                        : 'bg-[#FDFBF7] text-[#695742] border-[#E5D7C2] hover:bg-white'
-                    }`}
-                  >
-                    <Video className="w-3.5 h-3.5" />
-                    <span>En Línea (Zoom)</span>
-                  </button>
-                </div>
-                {selectedService.modality === 'Presencial' && (
-                  <p className="text-[10px] text-[#8C765C] mt-1">
-                    * {selectedService.name} se realiza exclusivamente en las instalaciones de Pachuca.
-                  </p>
-                )}
+                 
               </div>
 
               {/* Selector de Fechas Rápido */}
@@ -408,49 +387,12 @@ export const BookingModal: React.FC<BookingModalProps> = ({
                 </div>
               </div>
 
-              {/* Selector de Horarios en Tiempo Real */}
-              <div>
-                <div className="flex items-center justify-between mb-2">
-                  <label className="text-[11px] font-bold text-[#57442B] uppercase tracking-wider">
-                    Turnos disponibles para el {formatFullDate(selectedDate)}:
-                  </label>
-                  <span className="text-[10px] text-[#2E6B47] font-semibold flex items-center gap-1 shrink-0">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2E6B47] animate-ping"></span>
-                    En tiempo real
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                  {AVAILABLE_TIME_SLOTS.map((slot) => {
-                    const isSelected = selectedTime === slot.time;
-                    return (
-                      <button
-                        key={slot.time}
-                        type="button"
-                        onClick={() => setSelectedTime(slot.time)}
-                        className={`p-2.5 rounded-xl border text-xs font-semibold flex items-center justify-between transition ${
-                          isSelected
-                            ? 'bg-[#5B472A] text-white border-[#5B472A] shadow-xs'
-                            : 'bg-white border-[#E5D7C2] text-[#4A3B22] hover:bg-[#FAF4E8]'
-                        }`}
-                      >
-                        <span>{slot.time}</span>
-                        <span className={`text-[9px] px-1.5 py-0.5 rounded font-bold ${
-                          isSelected
-                            ? 'bg-white/20 text-white'
-                            : slot.status === 'limited'
-                            ? 'bg-[#FDEED9] text-[#A65B17]'
-                            : 'bg-[#EAF5ED] text-[#2E6B47]'
-                        }`}>
-                          {slot.status === 'limited' ? 'Último cupo' : 'Libre'}
-                        </span>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-
-              {validationError && (
+             
+              <div className="p-3 rounded-xl bg-[#F4EBDD] border border-[#DECBAF] text-xs text-[#57442B]">
+  <span className="font-bold">Horario por confirmar.</span>
+  <span> Equilibria confirmará la disponibilidad por WhatsApp.</span>
+</div>
+             {validationError && (
                 <div className="p-2.5 rounded-lg bg-[#FDEEEB] text-[#A63422] text-xs flex items-center gap-2">
                   <AlertCircle className="w-4 h-4 flex-shrink-0" />
                   <span>{validationError}</span>
