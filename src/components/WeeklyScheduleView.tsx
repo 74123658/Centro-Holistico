@@ -5,17 +5,12 @@ import { createWhatsAppInquiryUrl } from '../utils/whatsapp';
 import { getNextDateForSchedule } from '../utils/dateFormat';
 
 export const WeeklyScheduleView: React.FC = () => {
-  const [reservedClasses, setReservedClasses] = useState<{ [id: string]: boolean }>({});
+ 
   const [selectedDayFilter, setSelectedDayFilter] = useState<string>('Todos');
 
   const days = ['Todos', 'Lunes a Viernes', 'Martes', 'Miércoles', 'Jueves y Viernes'];
 
-  const handleReserve = (classId: string, className: string) => {
-    setReservedClasses(prev => ({
-      ...prev,
-      [classId]: !prev[classId]
-    }));
-  };
+  ;
 
   const filteredClasses = WEEKLY_CLASSES.filter(c => {
     if (selectedDayFilter === 'Todos') return true;
@@ -65,7 +60,7 @@ export const WeeklyScheduleView: React.FC = () => {
       {/* Lista de Clases */}
       <div className="space-y-3">
         {filteredClasses.map((cls) => {
-          const isReserved = !!reservedClasses[cls.id];
+      
          
           const nextDate = getNextDateForSchedule(cls.day);
 
