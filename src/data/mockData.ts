@@ -24,8 +24,7 @@ export const THERAPISTS: Therapist[] = [
     gender: "Terapeuta",
     photoUrl: "/therapists/virginia.jpg",
     localPhotoPath: "/therapists/virginia.jpg",
-    availableToday: true,
-    activeSlotsCount: 3,
+   
     badge: "+12 Años Exp.",
     phoneMsgCode: "VirginiaAltamirano",
     accreditations: ["Masajista Holística Certificada", "+12 Años de Experiencia Clínica"]
@@ -47,8 +46,7 @@ export const THERAPISTS: Therapist[] = [
     gender: "Terapeuta",
     photoUrl: "/therapists/nancy.jpg",
     localPhotoPath: "/therapists/nancy.jpg",
-    availableToday: true,
-    activeSlotsCount: 4,
+    
     badge: "Temazcal & Masajes",
     phoneMsgCode: "NancyChanel",
     accreditations: ["Masajista Profesional", "Acompañante de Temazcal Tradicional"]
@@ -100,8 +98,8 @@ export const THERAPISTS: Therapist[] = [
     gender: "Dra.",
     photoUrl: "/therapists/rosa.jpg",
     localPhotoPath: "/therapists/rosa.jpg",
-    availableToday: true,
-    activeSlotsCount: 3,
+   
+    
     badge: "SEP-CONOCER & Dr. Cs.",
     phoneMsgCode: "DraRosa",
     accreditations: [
@@ -127,8 +125,7 @@ export const THERAPISTS: Therapist[] = [
     gender: "Lic.",
     photoUrl: "/therapists/alma.jpg",
     localPhotoPath: "/therapists/alma.jpg",
-    availableToday: true,
-    activeSlotsCount: 2,
+  
     badge: "7 Años Exp.",
     phoneMsgCode: "AlmaPalafox",
     accreditations: ["Terapeuta Holística (7 Años)", "Facilitadora de Barras de Access y Danzaterapia"]
@@ -171,8 +168,7 @@ export const THERAPISTS: Therapist[] = [
     gender: "Terapeuta",
     photoUrl: "/therapists/mara.jpg",
     localPhotoPath: "/therapists/mara.jpg",
-    availableToday: true,
-    activeSlotsCount: 4,
+   
     badge: "Medicina Cuántica",
     phoneMsgCode: "MaraGomez",
     accreditations: ["Especialista en Medicina Cuántica y Cirugía Energética", "Terapeuta en Biodescodificación"]
