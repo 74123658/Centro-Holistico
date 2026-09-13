@@ -538,12 +538,4 @@ export const WEEKLY_CLASSES: ScheduleClass[] = [
   }
 ];
 
-export const AVAILABLE_TIME_SLOTS = [
-  { time: "09:30 AM", status: "available" },
-  { time: "11:00 AM", status: "available" },
-  { time: "12:30 PM", status: "limited" }, // Último cupo
-  { time: "02:00 PM", status: "available" },
-  { time: "03:30 PM", status: "available" },
-  { time: "05:00 PM", status: "limited" },
-  { time: "06:30 PM", status: "available" }
-];
+
