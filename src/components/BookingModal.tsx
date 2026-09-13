@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Check, Calendar as CalendarIcon, Clock, User, Phone, Sparkles, MapPin, Video, AlertCircle, ExternalLink, ChevronRight, ArrowLeft } from 'lucide-react';
 import { Service, Therapist, Appointment } from '../types';
-import { SERVICES, THERAPISTS, AVAILABLE_TIME_SLOTS } from '../data/mockData';
+import { SERVICES, THERAPISTS } from '../data/mockData';
 import { createWhatsAppBookingUrl } from '../utils/whatsapp';
 import { getTherapistPhoto } from '../utils/therapistPhotos';
 import { TherapistAvatar } from './TherapistAvatar';
