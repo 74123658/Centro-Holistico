@@ -467,44 +467,7 @@ nextSlotTime: "Consultar",
   }
 ];
 
-export const INITIAL_APPOINTMENTS: Appointment[] = [
-  {
-    id: "apt-101",
-    code: "EQ-4821",
-    serviceId: "barras-access",
-    serviceName: "Barras de Access Consciousness",
-    therapistId: "rosa-angeles",
-    therapistName: "Dra. Rosa Ángeles Vázquez García",
-    clientName: "Valeria Mendoza",
-    clientPhone: "771 234 5678",
-    clientEmail: "valeria.m@gmail.com",
-    notes: "Tengo mucho estrés acumulado y falta de sueño por proyectos de trabajo.",
-    date: new Date(Date.now() + 86400000).toISOString().slice(0, 10), // Mañana
-    time: "11:00 AM",
-    status: "confirmed",
-    createdAt: new Date().toISOString(),
-    durationMinutes: 60,
-    modality: "Presencial"
-  },
-  {
-    id: "apt-102",
-    code: "EQ-3914",
-    serviceId: "temazcal",
-    serviceName: "Temazcal Tradicional",
-    therapistId: "nancy-chanel",
-    therapistName: "Nancy Chanel Reyes Altamirano",
-    clientName: "Roberto Carvajal",
-    clientPhone: "771 890 1234",
-    clientEmail: "roberto.c@outlook.com",
-    notes: "Primera vez en temazcal, busco desintoxicación física y relajación.",
-    date: new Date(Date.now() + 86400000 * 3).toISOString().slice(0, 10), // En 3 días
-    time: "05:00 PM",
-    status: "confirmed",
-    createdAt: new Date().toISOString(),
-    durationMinutes: 120,
-    modality: "Presencial"
-  }
-];
+
 
 export const WEEKLY_CLASSES: ScheduleClass[] = [
   {
