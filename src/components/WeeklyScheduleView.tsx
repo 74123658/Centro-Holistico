@@ -10,7 +10,7 @@ export const WeeklyScheduleView: React.FC = () => {
 
   const days = ['Todos', 'Lunes a Viernes', 'Martes', 'Miércoles', 'Jueves y Viernes'];
 
-  ;
+
 
   const filteredClasses = WEEKLY_CLASSES.filter(c => {
     if (selectedDayFilter === 'Todos') return true;
