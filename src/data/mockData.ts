@@ -22,8 +22,8 @@ export const THERAPISTS: Therapist[] = [
       "Atención al adulto mayor"
     ],
     gender: "Terapeuta",
-    photoUrl: "/therapists/virginia.jpg",
-    localPhotoPath: "/therapists/virginia.jpg",
+    photoUrl: "/assets/therapists/virginia.png",
+localPhotoPath: "/assets/therapists/virginia.png",,
    
     badge: "+12 Años Exp.",
     phoneMsgCode: "VirginiaAltamirano",
@@ -44,8 +44,8 @@ export const THERAPISTS: Therapist[] = [
       "Atención personalizada"
     ],
     gender: "Terapeuta",
-    photoUrl: "/therapists/nancy.jpg",
-    localPhotoPath: "/therapists/nancy.jpg",
+   photoUrl: "/assets/therapists/nancy.png",
+localPhotoPath: "/assets/therapists/nancy.png",
     
     badge: "Temazcal & Masajes",
     phoneMsgCode: "NancyChanel",
@@ -96,8 +96,8 @@ export const THERAPISTS: Therapist[] = [
       }
     ],
     gender: "Dra.",
-    photoUrl: "/therapists/rosa.jpg",
-    localPhotoPath: "/therapists/rosa.jpg",
+    photoUrl: "/assets/therapists/rosa.png",
+    localPhotoPath: "/assets/therapists/rosa.png",
    
     
     badge: "SEP-CONOCER & Dr. Cs.",
@@ -123,8 +123,8 @@ export const THERAPISTS: Therapist[] = [
       "Danzaterapia"
     ],
     gender: "Lic.",
-    photoUrl: "/therapists/alma.jpg",
-    localPhotoPath: "/therapists/alma.jpg",
+    photoUrl: "/assets/therapists/alma.png",
+    localPhotoPath: "/assets/therapists/alma.png",
   
     badge: "7 Años Exp.",
     phoneMsgCode: "AlmaPalafox",
@@ -166,8 +166,8 @@ export const THERAPISTS: Therapist[] = [
       }
     ],
     gender: "Terapeuta",
-    photoUrl: "/therapists/mara.jpg",
-    localPhotoPath: "/therapists/mara.jpg",
+    photoUrl: "/assets/therapists/mara.png",
+    localPhotoPath: "/assets/therapists/mara.png",
    
     badge: "Medicina Cuántica",
     phoneMsgCode: "MaraGomez",
