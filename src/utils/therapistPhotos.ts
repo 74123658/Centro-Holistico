@@ -5,8 +5,19 @@
 
 const PHOTO_STORAGE_KEY_PREFIX = 'equilibria_photo_';
 const FLYER_STORAGE_KEY_PREFIX = 'equilibria_flyer_';
-
+const PERMANENT_THERAPIST_PHOTOS: Record<string, string> = {
+  'virginia-altamirano': '/assets/therapists/virginia.png',
+  'nancy-chanel': '/assets/therapists/nancy.png',
+  'rosa-angeles': '/assets/therapists/rosa.png',
+  'alma-erika': '/assets/therapists/alma.png',
+  'mara-alejandra': '/assets/therapists/mara.png',
+};
 export function getTherapistPhoto(therapistId: string, fallbackUrl?: string): string {
+  const permanentPhoto = PERMANENT_THERAPIST_PHOTOS[therapistId];
+  if (permanentPhoto) {
+    return permanentPhoto;
+  }
+
   try {
     const saved = localStorage.getItem(`${PHOTO_STORAGE_KEY_PREFIX}${therapistId}`);
     if (saved && saved.startsWith('data:image')) {
