@@ -23,7 +23,7 @@ export const THERAPISTS: Therapist[] = [
     ],
     gender: "Terapeuta",
     photoUrl: "/assets/therapists/virginia.png",
-localPhotoPath: "/assets/therapists/virginia.png",,
+localPhotoPath: "/assets/therapists/virginia.png",
    
     badge: "+12 Años Exp.",
     phoneMsgCode: "VirginiaAltamirano",
