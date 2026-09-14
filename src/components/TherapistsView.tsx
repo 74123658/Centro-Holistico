@@ -117,19 +117,7 @@ export const TherapistsView: React.FC<TherapistsViewProps> = ({
         </p>
       </div>
 
-      {/* Bulk Uploader & Guidance */}
-      <BulkPhotoUploader
-        onOpenCropModal={(therapistId, therapistName, imageSrc) => {
-          setCroppingTherapistId(therapistId);
-          setCroppingTherapistName(therapistName);
-          setCroppingImageSrc(imageSrc);
-          setCropModalOpen(true);
-        }}
-        onOpenFlyerModal={(therapistId, therapistName) => {
-          handleOpenFlyer(therapistId, therapistName);
-        }}
-        onSuccessToast={(msg) => showToast(msg)}
-      />
+     
 
       {/* Lista de Terapeutas */}
       <div className="space-y-4">
@@ -187,45 +175,7 @@ export const TherapistsView: React.FC<TherapistsViewProps> = ({
                     {therapist.title}
                   </p>
                   
-                  {isCustom ? (
-                    <div className="flex items-center gap-1.5 mt-1 flex-wrap">
-                      <span className="text-[10px] bg-[#EAF5ED] text-[#2E6B47] px-2 py-0.5 rounded-full font-bold border border-[#D0EBD8] inline-flex items-center gap-1">
-                        <CheckCircle2 className="w-3 h-3 text-[#2E6B47]" />
-                        Foto Real Verificada
-                      </span>
-                      <button
-                        onClick={() => {
-                          setCroppingTherapistId(therapist.id);
-                          setCroppingTherapistName(therapist.name);
-                          setCroppingImageSrc(currentPhoto);
-                          setCropModalOpen(true);
-                        }}
-                        className="text-[10px] text-[#8C6225] hover:text-[#523A16] font-semibold flex items-center gap-0.5 hover:underline cursor-pointer"
-                        title="Ajustar encuadre"
-                      >
-                        <SlidersHorizontal className="w-2.5 h-2.5" />
-                        Reencuadrar
-                      </button>
-                      <button
-                        onClick={() => handleResetPhoto(therapist.id, therapist.name)}
-                        className="text-[10px] text-[#A64B2A] hover:underline flex items-center gap-0.5"
-                        title="Restablecer"
-                      >
-                        <RotateCcw className="w-2.5 h-2.5" />
-                        Quitar
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="flex items-center gap-1.5 mt-1">
-                      <button
-                        onClick={() => fileInputRefs.current[therapist.id]?.click()}
-                        className="text-[10px] bg-[#FFF8EE] text-[#8C6225] px-2 py-0.5 rounded-full font-semibold border border-[#E8D4B5] hover:bg-[#FBEED7] transition inline-flex items-center gap-1 cursor-pointer"
-                      >
-                        <Camera className="w-3 h-3 text-[#8C6225]" />
-                        Subir foto real de su ficha
-                      </button>
-                    </div>
-                  )}
+               
 
                   <p className="text-[11px] text-[#7A664E] mt-1.5 line-clamp-3 leading-relaxed">
                     {therapist.exp}
@@ -335,14 +285,7 @@ export const TherapistsView: React.FC<TherapistsViewProps> = ({
                     </button>
                   )}
 
-                  <button
-                    onClick={() => fileInputRefs.current[therapist.id]?.click()}
-                    className="px-2.5 py-1.5 rounded-xl bg-[#FAF4E8] hover:bg-[#F2E5CE] text-[#4A3B22] border border-[#DECBAF] transition flex items-center gap-1 text-xs font-semibold cursor-pointer"
-                    title={isCustom ? "Cambiar foto real" : "Subir foto real"}
-                  >
-                    <Camera className="w-3.5 h-3.5 text-[#9C702E]" />
-                    <span className="hidden sm:inline">{isCustom ? "Cambiar Foto" : "Subir Foto Real"}</span>
-                  </button>
+                 
 
                   <a
                     href={createWhatsAppInquiryUrl(`Hola ${therapist.name}, vi tu perfil en Equilibria Club Holístico y me gustaría consultar disponibilidad de agenda contigo.`)}
